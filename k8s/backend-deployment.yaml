@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/dolfino/amazfit-backend:59a2cd243b719b91c4c46b8ba89e660328e382d2
+        image: ghcr.io/dolfino/amazfit-backend:fdc28fc0514475f1fbd5209483a693aff572ea9a
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
