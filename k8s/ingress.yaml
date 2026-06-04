@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: amazfit-app-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  rules:
+  - http:
+      paths:
+      # Route API traffic to the backend service
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: amazfit-backend-service
+            port:
+              number: 8000
+      # Route other traffic to the React frontend SPA
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: amazfit-frontend-service
+            port:
+              number: 8080

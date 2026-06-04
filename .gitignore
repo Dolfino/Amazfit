@@ -1,0 +1,35 @@
+# Logs e PIDs
+*.log
+*.pid
+.backend.pid
+.frontend.pid
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+*.db
+app/backend/amazfit.db
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+.local
+
+# IDEs / Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.fit
+cb2184972780f7659225a824a636b2e7
