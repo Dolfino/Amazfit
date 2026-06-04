@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/meu-user/amazfit-frontend:${GITHUB_SHA}
+        image: ghcr.io/dolfino/amazfit-frontend:${GITHUB_SHA}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

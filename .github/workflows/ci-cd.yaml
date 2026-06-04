@@ -16,7 +16,7 @@ permissions:
 env:
   REGISTRY: ghcr.io
   # Replace with actual github username
-  OWNER: meu-user
+  OWNER: dolfino
   BACKEND_IMAGE_NAME: amazfit-backend
   FRONTEND_IMAGE_NAME: amazfit-frontend
 

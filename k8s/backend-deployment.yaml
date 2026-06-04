@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/meu-user/amazfit-backend:${GITHUB_SHA}
+        image: ghcr.io/dolfino/amazfit-backend:${GITHUB_SHA}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
