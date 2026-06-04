@@ -35,6 +35,10 @@ def process_and_save_fit(contents: bytes, db: Session) -> models.Activity:
     processor.parse()
     payload = processor.get_json_payload()
     
+    # Sanitize NaN/Inf values BEFORE database insertion
+    # PostgreSQL strictly rejects NaN in JSON columns (RFC 7159 compliance)
+    payload = models.sanitize_json_values(payload)
+    
     # Extract UTC start time
     start_dt = processor.records_df['timestamp'].min()
     if hasattr(start_dt, 'to_pydatetime'):
