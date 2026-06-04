@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/dolfino/amazfit-frontend:1bda3ef4405192bd7b540d1548766c7f27ae5c5b
+        image: ghcr.io/dolfino/amazfit-frontend:3f7b4d2d8a1405818689ae85a09d80e788f3f6b1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
