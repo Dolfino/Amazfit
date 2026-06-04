@@ -21,8 +21,7 @@ WORKDIR /app
 COPY --from=builder /install /usr/local
 
 # Copy application files
-COPY fit_processor.py .
-COPY main.py .
+COPY *.py ./
 
 # Create a non-root group and user for security
 RUN groupadd -g 10001 appgroup && \
